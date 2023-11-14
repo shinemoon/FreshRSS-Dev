@@ -1,0 +1,180 @@
+//Left Pannel
+.aside {
+    background:rgba($Far_Sky_Blue,0.4);
+    .toggle_aside {
+        background:$Pannel_blue;
+        border-bottom-color: #ddd;
+    };
+    //Folder List
+    .tree-folder {
+        &.active .tree-folder-title {
+            background:rgba(234,173,26,0.1); 
+        };
+        .feed {
+            .item-title:not([data-unread="0"]) {
+                font-weight:lighter;
+            };
+            &.item.active {
+                background:rgba($Antler_Brown,0.1);   
+            };
+        };
+    };
+    //Button
+    #btn-subscription {
+        @include bigbuttonStyle;
+        padding-top:8px;
+        padding-left:20px;
+        padding-right:20px;
+    };
+    #btn-add {
+        @include bigbuttonStyle;
+        padding-top:8px;
+        &:hover {
+            background:rgba($Firefly_Purple,0.3);
+        }
+    }
+
+    //Scrollbar
+    #sidebar {
+        @include hiddenScroll;
+        padding-bottom:200px;
+        //Sidebar dropdown
+        ul.dropdown-menu {
+            @include configPannel;
+            border-style: dotted;
+            &::after {
+                border-style:dotted;
+                border-color:$mink_gray;
+                background:rgba(#efefef,0.2);
+            };
+        };
+        //numbers
+        a.item-title:not([data-unread="0"])::after {
+            border:none;
+            color:$Antler_Brown;
+        };
+    };
+};
+
+
+// Top Pannel:
+.nav_menu {
+    //Sub Button
+    .stick {
+        .btn {
+            &.read_all {
+                @include bigbuttonStyle;
+                border-radius:5px;
+            }
+        };
+    };
+    
+    
+    .stick .btn.read_all:hover {
+        background: rgba($Cloisonne,0.5);
+        color:$Cloisonne;
+    }
+    
+    .stick.configure-feeds .btn{     
+        background:rgba($Apricot_yellow,0.9);
+        color:white;
+    }
+    
+    .stick.configure-feeds .btn:hover{
+        background:rgba($Apricot_yellow,0.5);
+        color:brown;
+    }
+
+    ul.dropdown-menu {
+        @include configPannel;
+        &::after {
+            border-style:dotted;
+            border-color:$mink_gray;
+            background:rgba(#efefef,0.2);
+        };
+    };
+    .btn {
+        background:rgba($Cloisonne,0.0);
+    };
+};
+
+//Confiure
+.configure {
+    .dropdown .dropdown-menu {
+         @include configPannel;
+         .dropdown-section-title {
+             @include sectionHead;
+         };
+};
+}
+
+
+//Mask after popping
+.dropdown-close {
+    background:rgba($Far_Sky_Blue,0.1);
+    backdrop-filter: blur(3px);
+};
+
+
+//Slider:
+
+#slider {
+    #slider-content {
+        @include configPannel;
+    };
+    h1 {
+        @extend legend;
+    };
+    button.btn {
+        @extend button;
+        margin-right:0px;
+    };
+    a.btn {
+        @extend button;
+        margin-right:0px;
+        padding-top:8px;
+        &:not(.open-url) {
+            border-radius:3px;
+            margin-top:8px;
+            padding-top:12px;
+        };
+    };
+
+    label {
+        color:$Cloisonne;
+        font-size: $fontLevel4;
+    }
+
+};
+
+//Config
+
+#aside_feed {
+    .nav-header {
+        @include sectionHead;
+        font-weight:normal;
+    };
+};
+
+//NavEn
+#nav_entries{
+    background:rgba($Cloisonne, 0.2);
+    a:hover {
+        background:rgba($Cloisonne, 0.3);
+    }
+}
+
+//Special fix
+.post {
+    a.btn{
+            @extend button;
+        margin-right:0px;
+    padding-top:12px;
+    };
+    .switch {
+        border-radius:0px;
+    };
+    .manage-list li {
+        margin-top:10px;
+    };
+};

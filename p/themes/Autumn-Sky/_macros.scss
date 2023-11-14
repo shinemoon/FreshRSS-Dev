@@ -1,0 +1,217 @@
+/*
+ *  远天蓝:209,222,230
+ *  苍绿:32,62,54
+ *  煤竹:110,85,47
+ *  杏黄:250,142,22
+ *  艳红:237,90,101
+ *  杏仁黄:249,236,195
+ *  水貂灰:147,156,151
+ *  景泰蓝:39,117,182
+ *  淡茧黄:249,215,112
+ *  萤草紫:194,111,155
+ *  琵琶茶:117,120,68
+ *  水绿:140,194,105
+ *  霁青:99,187,208
+ *  鹿角棕:227,189,141
+ *  香叶红:240,124,130
+ *  琵琶黄:234,173,26
+ *  明绿:248,195,135
+ *  蛋壳黄:158,204,171
+*/
+
+/*
+* Far_Sky_Blue:209,222,230
+* Elder_Green:32,62,54
+* Coal_Bamboo:110,85,47
+* Apricot_yellow:250,142,22
+* Brilliant_Red:237,90,101
+* Almond_yellow:249,236,195
+* mink_gray:147,156,151
+* Cloisonne:39,117,182
+* Light_cocoon_yellow:249,215,112
+* Firefly_Purple:194,111,155
+* Pipa_Tea:117,120,68
+* Aqua_green:140,194,105
+* Ji_Qing:99,187,208
+* Antler_Brown:227,189,141
+* Geranium_red:240,124,130
+* Pipa_Yellow:234,173,26
+* Bright_Green:248,195,135
+* Eggshell_yellow:158,204,171
+*/
+
+/*
+*   Pannel_blue:    #EDF2F5
+*   Nav_blue:       #C1E4EC
+*   Header_blue:    #93BADA
+*   Button_brown:   #E5C7A2
+*/
+// Palette
+$Far_Sky_Blue:rgb(209,222,230);
+$Elder_Green:rgb(32,62,54);
+$Coal_Bamboo:rgb(110,85,47);
+$Apricot_yellow:rgb(250,142,22);
+$Brilliant_Red:rgb(237,90,101);
+$Almond_yellow:rgb(249,236,195);
+$mink_gray:rgb(147,156,151);
+$Cloisonne:rgb(39,117,182);
+$Light_cocoon_yellow:rgb(249,215,112);
+$Firefly_Purple:rgb(194,111,155);
+$Pipa_Tea:rgb(117,120,68);
+$Aqua_green:rgb(140,194,105);
+$Ji_Qing:rgb(99,187,208);
+$Antler_Brown:rgb(227,189,141);
+$Geranium_red:rgb(240,124,130);
+$Pipa_Yellow:rgb(234,173,26);
+$Bright_Green:rgb(248,195,135);
+$Eggshell_yellow:rgb(158,204,171);
+
+$Pannel_blue:#EDF2F5;
+$Nav_blue:#C1E4EC;
+$Header_blue:#93BADA;
+$Button_brown:#E5C7A2;
+
+// Font level
+
+$fontLevel1:20px;
+$fontLevel2:18px;
+$fontLevel3:16px;//Suppose standard one
+$fontLevel4:14px; 
+$fontLevel5:12px;
+$fontLevel6:10px;
+$fontLevel7:8px;
+
+
+// Z-index Level
+$layerHighlight: 101;
+$layerMask: 100;
+$layerContent: 99;
+$layerBottom: 98;
+
+
+// Style 
+// Key Head
+@mixin sectionHead {
+    font-size: $fontLevel1;                               
+    color: $Antler_Brown;                    
+    border-bottom:1px solid $Antler_Brown; 
+}
+
+//Links
+@mixin linkButton($size:$fontLevel4) {
+    font-size:$size;
+    color: $Cloisonne;    
+}
+
+//Text Input
+@mixin textInput {
+    border: 2px solid rgba($Antler_Brown,0.8);
+    outline-width: 0px;
+    &:focus-visible {
+        border-color: rgba($Antler_Brown,1);
+    }
+}
+
+//Button
+@mixin buttonNormal {
+    background: $Button_brown;
+    border-style:none;
+    margin-left:1px;
+    &:hover {
+        opacity:0.8;
+    };
+}
+
+//Entry Title
+@mixin fontEntryTitle {
+    font-size:$fontLevel3;
+    font-weight:normal; 
+};
+
+// Article Text
+@mixin fontTitle {
+    font-size:$fontLevel4;
+    font-weight:normal; 
+};
+
+// Article Content
+@mixin styleContent {
+    font-size: $fontLevel2*0.9;
+    line-height:$fontLevel2 * 1.4;
+    border-top:1px dotted $Apricot_yellow;
+    border-bottom:1px dotted $Apricot_yellow;
+    background:rgba($Almond_yellow,0.1);
+    padding-left:20px;
+    padding-right:20px;
+};
+
+// Section Info
+@mixin sectionDay {
+    font-size: $fontLevel4;
+    color:$Coal_Bamboo;
+    background:rgba($Pipa_Tea,0.1);
+};
+
+@mixin styleSectionInfo {
+    padding-top:10px;
+    padding-right:20px;
+    font-size: $fontLevel3;
+    font-style: normal;
+    text-align: right;
+    color:$Geranium_red;
+    font-weight:normal;
+};
+
+
+@mixin bigbuttonStyle($buttonColor:$Coal_Bamboo, $backColor:$Antler_Brown) {
+     color: $buttonColor;
+     border-radius: 0px;
+     margin-left:1px;
+     background: $backColor;
+     opacity: 0.8;
+     &:hover {
+        opacity: 0.5;
+     };
+     border-color:rgba(0,0,0,0);
+
+};
+
+@mixin hiddenScroll {
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+@mixin configPannel {
+    background:$Pannel_blue;
+    border:1px solid rgba($Coal_Bamboo,0.8);
+    border-radius:5px;
+    .item{
+        padding-left:20px;
+        padding-right:20px;
+        padding-top:5px;
+        &:hover > button {
+            color:$Elder_Green;
+        };
+
+        &:hover > a {
+            color:$Elder_Green;
+        };
+        .dropdown-section {
+            border-top-style:dotted;
+            .dropdown-section-title {
+                font-size:$fontLevel2;
+                font-weight:normal;
+                letter-spacing:1px;
+                color:rgba($Apricot_yellow,0.8);
+                margin-left:-10px;
+            };
+        };  
+    };
+    .item.separator {
+        border-top-style:dotted;
+        border-top-color:$mink_gray;
+    }
+};
+

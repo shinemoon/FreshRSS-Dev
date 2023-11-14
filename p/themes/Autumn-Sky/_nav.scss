@@ -1,0 +1,11 @@
+
+.nav_menu {
+    background:$Nav_blue;
+    width:100%;
+    .btn {
+        &:hover {
+            opacity:0.8;
+            background:rgba($Cloisonne,0.2);
+        }
+    }
+}

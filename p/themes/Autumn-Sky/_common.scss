@@ -1,0 +1,39 @@
+/*
+*   Common Set of Overall View
+*/
+
+html, body {
+    font-size:$fontLevel5;
+};
+
+h1 {
+     font-size: $fontLevel1*1.2;
+     color: $Apricot_yellow;
+};
+
+h2 {
+    @extend h1;
+    font-size:$fontLevel2;
+};
+
+
+
+a, button.as-link, a.btn {
+    @include linkButton;
+};
+
+button, .btn {
+    @include buttonNormal;
+};
+
+
+legend {
+    @include sectionHead;
+};
+
+label {
+    font-size:$fontLevel5;
+    &.group-name {
+        font-size:$fontLevel4;
+    };
+};

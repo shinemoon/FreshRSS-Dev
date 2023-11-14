@@ -1,0 +1,8 @@
+{
+  "name": "Autumn Sky",
+  "author": "shinemoon",
+  "description": "Compact & Simplified for more info in one grasp",
+  "version": 0.1,
+  "files": ["_frss.css","autumn.css"],
+  "theme-color": "#E5C7A2"
+}

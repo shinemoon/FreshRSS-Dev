@@ -1,0 +1,38 @@
+/* 
+*   Top Banner Head Style
+*/
+@use 'sass:color';
+
+
+.header {
+    height:50px;
+    background: rgba($Cloisonne, $alpha:0.5);
+    border-bottom:1px dotted #CCC; 
+    //Search 
+    input {
+        @include textInput;
+    };
+    button.btn {
+        @include bigbuttonStyle;
+        border-color:rgba(0,0,0,0);
+        opacity:1;
+    };
+    a.btn {
+        background:rgba($Elder_Green,0.1);
+        border-radius:20px;
+        padding-top:8px;
+        padding-left:12px;
+        padding-right:12px;
+    };
+    .item.title {
+        a .logo{
+            filter: invert(70%);
+        };
+        a:hover .logo{
+            filter: invert(70%)  opacity(70%);
+        };
+    };
+};
+
+
+

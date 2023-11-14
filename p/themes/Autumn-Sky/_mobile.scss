@@ -1,0 +1,42 @@
+@media (max-width: 840px) {
+    //SideNav 
+    nav#aside_feed{
+        z-index:300;
+        @include configPannel;
+        .aside #sidebar {
+            overflow-y:auto;
+        };
+    };
+    //Nav
+    nav.nav_menu {
+        a.view-rss.btn, a#toggle-starred, a#toggle-unread, a.view-normal, a.view-global, a.view-reader, button.read_all,  a#toggle-non-starred, a#toggle-userqueries, a.view-n { 
+            display:none;
+        };
+    };
+
+    //Config Drop
+    .dropdown-menu .toggle_aside {
+        background:$Pannel_blue;
+    };
+
+    .form-group label.group-name {
+        text-align:left;
+        font-size:$fontLevel5;
+        color:$mink_gray;
+    };
+
+    #stream-footer {
+        height:100px;
+    };
+}
+
+/*
+    #mark-read-menu ul.dropdown-menu {
+        width:300px;
+        border-radius:5px;
+    }
+    .flux:not(.current):hover .item.title {
+        width:100%;
+        top:auto;
+    }
+*/

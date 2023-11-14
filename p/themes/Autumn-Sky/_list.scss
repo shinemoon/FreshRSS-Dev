@@ -1,0 +1,91 @@
+/* Reader Main Page (right)*/
+main { 
+    // Day Categor
+    .day {
+        @include sectionDay;
+    }
+    // Article items
+    .flux {
+        z-index:$layerContent;
+        // Article: Website
+       .item.website .websiteName {
+                font-size: $fontLevel4;
+                font-weight:lighter;
+        };
+        //List Entry 
+        &:not(.not_read):not(.current){
+            //=>  Read ,Non-current Entry
+            @include fontEntryTitle;
+            background:rgba($Apricot_yellow,0.05);
+            //:HOVER
+            &:hover{
+                background:rgba($Apricot_yellow,0.1);
+            };
+
+            // Article: Title
+            .item.title {
+                //:HOVER
+                &:hover {
+                    background:rgba($Antler_Brown,0.1);
+                };
+            };
+        };
+        &.not_read, &.current {
+            //=>  UnRead ,current Entry
+            // Article Content Page
+            .item.title {
+                // Article: Title
+                @include fontEntryTitle;
+            };
+            .content {
+                // Article: Content
+                @include styleContent;
+            };
+        };
+        &:not(.current):hover {
+            //=>  Not-current under hover
+            background:rgba($Firefly_Purple,0.1);
+            // WA to avoid the shrink of row while hovering there.
+            .item.title {
+                max-width: calc(100% - 320px);
+                position: relative;
+            }
+
+        };
+    };
+};
+
+
+.day .name {
+    @include styleSectionInfo;
+};
+
+
+
+
+#bigMarkAsRead {
+    background: rgba($Cloisonne,0.4);  
+    padding: 10px 0 0px 0;
+    margin-top:20px;
+    font-size: $fontLevel3;
+    &:hover {
+        background: rgba($Cloisonne,0.6);  
+        color:white;
+    }
+    &.as-link{
+        color:$mink_gray;
+    }
+ 
+    .bigTick {
+        font-size: $fontLevel4;
+    }
+    
+    .jumpNext, .markAllRead {
+        display:none;
+    }
+};
+
+
+#stream-footer {
+    height:100px;
+};
