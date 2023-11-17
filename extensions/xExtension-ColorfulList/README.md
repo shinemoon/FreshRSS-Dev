@@ -1,5 +1,8 @@
-# FreshRSS FixedNavMenu
-Sets the position of the navigation menu to fixed when scrolling down on the desktop version of FreshRSS
+# FreshRSS Colorful List
+Generate light different background color for article list rows (relying on the feed name)
 
 # Installation
-To use it, upload the *xExtension-FixedNavMenu* folder in your ./extensions directory and enable it on the extension panel in FreshRSS.
+To use it, upload the *xExtension-ColorfulList* folder in your ./extensions directory and enable it on the extension panel in FreshRSS.
+
+# Preview
+![snapshot](snapshot.png)

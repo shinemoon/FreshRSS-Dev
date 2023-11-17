@@ -1,4 +1,4 @@
-$(document).ready(function(){
+document.addEventListener('DOMContentLoaded', function(){
     function monitorEntry(monitorCallback) {
         const targetNode = document.getElementById('stream');
         const config = { attributes: false, childList: true, subtree: false};
@@ -18,11 +18,11 @@ $(document).ready(function(){
 
 
 function colorize(entries){
-    let entry = $('.flux_header');
-    for(let i = 0; i< entry.length; i++) {
-        let cl = stringToColour(entry.eq(i).find('.website').text())+'12';
-        entry.eq(i).css('background',cl);
-    };
+    let entry = document.querySelectorAll('.flux_header');
+    entry.forEach((e,i)=>{
+        let cl = stringToColour(e.querySelector('.website').textContent)+'12';
+        e.style.background=cl;
+    });
 };
 
 
