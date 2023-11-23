@@ -1,0 +1,8 @@
+{
+	"name": "Picture Viewer",
+	"author": "Claud Xiao",
+	"description": "View Picture by floating Window",
+	"version": 0.1,
+	"entrypoint": "PicViewer",
+	"type": "user"
+}
