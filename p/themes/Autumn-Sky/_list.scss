@@ -40,7 +40,21 @@ main {
             .content {
                 // Article: Content
                 @include styleContent;
+                div[data-sanitized-class="pic-row"] {
+                    //text-align:center;
+                    img {
+                        //
+                        border:2px solid #aaa;
+                        border-radius:4px;
+                        width: 100px;
+                        height: 100px;
+                        object-fit: cover;
+                        &:hover {
+                        };
+                    };
+                };
             };
+            
         };
         &:not(.current):hover {
             //=>  Not-current under hover
