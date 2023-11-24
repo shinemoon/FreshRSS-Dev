@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
         const config = { attributes: false, childList: true, subtree: false};
         const callback = function(mutationsList, observer) {
             for(let mutation of mutationsList) {
+                console.log(mutation.type);
                 if (mutation.type === 'childList') {
                     monitorCallback(mutationsList);
                 }
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function(){
 });
 
 function gallerize(){
-    $('div[data-sanitized-class="pic-row"]').magnificPopup({
+    $('div.flux article div[data-sanitized-class="pic-row"]').magnificPopup({
         type:'image',
         delegate: 'a', // child items selector, by clicking on it popup will open
         showCloseBtn: false,
