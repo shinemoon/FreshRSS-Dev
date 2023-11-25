@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', function(){
                     }
         };
         const observer = new MutationObserver(callback);
-        observer.observe(targetNode, config);
+        if(targetNode)
+            observer.observe(targetNode, config);
         //observer.disconnect();
     };
     monitorEntry(gallerize);
