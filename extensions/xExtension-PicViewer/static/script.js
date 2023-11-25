@@ -4,12 +4,12 @@ document.addEventListener('DOMContentLoaded', function(){
         const config = { attributes: false, childList: true, subtree: false};
         const callback = function(mutationsList, observer) {
             for(let mutation of mutationsList) {
-                console.log(mutation.type);
                 if (mutation.type === 'childList') {
+                    console.log(mutation.type);
                     monitorCallback(mutationsList);
                 }
-                    }
-        };
+            }
+        }
         const observer = new MutationObserver(callback);
         if(targetNode)
             observer.observe(targetNode, config);
