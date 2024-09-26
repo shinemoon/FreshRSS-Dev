@@ -55,6 +55,7 @@
   --frss-background-color-error-transparent: #ff000040;
   --frss-font-color-error: #f00;
   --frss-background-color: #fff;
+  --frss-notification-background-color: #e4e0da;
   --frss-background-color-transparent: #ffffff7f;
   --frss-background-color-middle: #eee;
   --frss-background-color-dark: #ccc;
@@ -740,6 +741,7 @@ input[type=checkbox]:focus-visible {
   width: 100%;
   white-space: nowrap;
   box-sizing: border-box;
+  font-size: xx-small;
 }
 
 .dropdown-menu > .item[aria-checked=true] > a::before {
@@ -782,7 +784,7 @@ input[type=checkbox]:focus-visible {
 .item.separator {
   margin-top: 5px;
   padding-top: 5px;
-  border-top-width: 1px;
+  border-top-width: 0px;
   border-top-style: solid;
 }
 
@@ -1526,7 +1528,7 @@ a.website:hover .favicon {
   border: 1px solid var(--frss-border-color);
   opacity: 1;
   text-align: center;
-  line-height: 2;
+  line-height: 1.5;
   vertical-align: middle;
   visibility: visible;
   transition: visibility 0s, opacity 0.3s linear;
@@ -1544,7 +1546,7 @@ a.website:hover .favicon {
   bottom: 0;
   right: 0;
   display: inline-block;
-  line-height: 3;
+  line-height: 2;
 }
 
 .notification a.close:hover {
@@ -1644,6 +1646,10 @@ a.website:hover .favicon {
 
 #nav_entries a {
   display: block;
+}
+
+#nav_entries button, #nav_entries .post a.btn, .post #nav_entries a.btn, #nav_entries #slider a.btn, #slider #nav_entries a.btn, #nav_entries #slider button.btn, #slider #nav_entries button.btn {
+  width: 24%;
 }
 
 /*=== "Load" parts */
@@ -2855,7 +2861,7 @@ form th {
 }
 
 .flux_header .title {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .flux .website .favicon {
@@ -3073,7 +3079,7 @@ button:hover, .post a.btn:hover, #slider a.btn:hover, #slider button.btn:hover, 
 }
 
 legend, #slider h1, #slider h2 {
-  font-size: 20px;
+  font-size: x-small;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
 }
@@ -3154,8 +3160,8 @@ main .flux.not_read .item.title, main .flux.current .item.title {
   font-weight: normal;
 }
 main .flux.not_read .content, main .flux.current .content {
-  font-size: 16.2px;
-  line-height: 25.2px;
+  font-size: 12.8px;
+  line-height: 22.4px;
   border-top: 1px dotted rgb(250, 142, 22);
   border-bottom: 1px dotted rgb(250, 142, 22);
   background: rgba(249, 236, 195, 0.1);
@@ -3407,9 +3413,10 @@ main .flux:not(.current):hover .item.title {
   border-top-color: rgb(147, 156, 151);
 }
 .configure .dropdown .dropdown-menu .dropdown-section-title {
-  font-size: 20px;
+  font-size: x-small;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
+  font-size: x-small;
 }
 
 .dropdown-close {
@@ -3465,7 +3472,7 @@ main .flux:not(.current):hover .item.title {
 }
 
 #aside_feed .nav-header {
-  font-size: 20px;
+  font-size: x-small;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
   font-weight: normal;

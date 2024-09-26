@@ -104,6 +104,7 @@
          @include configPannel;
          .dropdown-section-title {
              @include sectionHead;
+	     font-size:x-small;
          };
 };
 }

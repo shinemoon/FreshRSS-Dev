@@ -92,7 +92,7 @@ $layerBottom: 98;
 // Style 
 // Key Head
 @mixin sectionHead {
-    font-size: $fontLevel1;                               
+    font-size: x-small;                              
     color: $Antler_Brown;                    
     border-bottom:1px solid $Antler_Brown; 
 }
@@ -136,8 +136,8 @@ $layerBottom: 98;
 
 // Article Content
 @mixin styleContent {
-    font-size: $fontLevel2*0.9;
-    line-height:$fontLevel2 * 1.4;
+    font-size: $fontLevel3*0.8;
+    line-height:$fontLevel3 * 1.4;
     border-top:1px dotted $Apricot_yellow;
     border-bottom:1px dotted $Apricot_yellow;
     background:rgba($Almond_yellow,0.1);

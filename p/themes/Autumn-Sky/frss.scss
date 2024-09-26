@@ -11,6 +11,7 @@
 	--frss-font-color-error: #f00;
 
 	--frss-background-color: #fff;
+	--frss-notification-background-color: #e4e0da;
 	--frss-background-color-transparent: #ffffff7f;
 	--frss-background-color-middle: #eee;
 	--frss-background-color-dark: #ccc;
@@ -707,6 +708,7 @@ input[type="checkbox"]:focus-visible {
 	width: 100%;
 	white-space: nowrap;
 	box-sizing: border-box;
+	font-size:xx-small;
 }
 
 .dropdown-menu > .item[aria-checked="true"] > a::before {
@@ -747,7 +749,7 @@ input[type="checkbox"]:focus-visible {
 .item.separator {
 	margin-top: 5px;
 	padding-top: 5px;
-	border-top-width: 1px;
+	border-top-width: 0px;
 	border-top-style: solid;
 }
 
@@ -1500,7 +1502,7 @@ a.website:hover .favicon {
 	border: 1px solid var(--frss-border-color);
 	opacity: 1;
 	text-align: center;
-	line-height: 2;
+	line-height: 1.5;
 	vertical-align: middle;
 	visibility: visible;
 	transition: visibility 0s, opacity .3s linear;
@@ -1517,7 +1519,7 @@ a.website:hover .favicon {
 	top: 0; bottom: 0;
 	right: 0;
 	display: inline-block;
-	line-height: 3;
+	line-height: 2;
 }
 
 .notification a.close:hover {
@@ -1616,7 +1618,13 @@ a.website:hover .favicon {
 
 #nav_entries a {
 	display: block;
+}	
+
+#nav_entries button{
+	width:24%;
 }
+
+
 
 /*=== "Load" parts */
 #first_load {
