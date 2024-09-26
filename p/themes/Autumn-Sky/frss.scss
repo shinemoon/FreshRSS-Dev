@@ -1368,6 +1368,14 @@ a.website:hover .favicon {
 	margin-right: 0.25rem;
 }
 
+.flux_content .content {
+	img {
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+	}
+}
+
 /*=== Feed article content */
 .hide_posts > .flux:not(.active) > .flux_content {
 	display: none;
