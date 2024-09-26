@@ -443,6 +443,7 @@ td.numeric {
 
 .form-group.form-actions {
   min-width: 250px;
+  backdrop-filter: blur(5px) grayscale(50);
 }
 
 .form-group .group-name {
@@ -3065,7 +3066,7 @@ h2 {
 }
 
 a, button.as-link, .post a.as-link.btn, #slider a.as-link.btn, #slider button.as-link.btn, a.btn {
-  font-size: 14px;
+  font-size: 12px;
   color: rgb(39, 117, 182);
 }
 
@@ -3112,12 +3113,15 @@ label.group-name {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
-  border-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0);
-  opacity: 1;
 }
 .header button.btn:hover, .header .post a.btn:hover, .post .header a.btn:hover, .header #slider a.btn:hover, #slider .header a.btn:hover, .header #slider button.btn:hover, #slider .header button.btn:hover {
   opacity: 0.5;
+}
+.header button.btn, .header .post a.btn, .post .header a.btn, .header #slider a.btn, #slider .header a.btn, .header #slider button.btn, #slider .header button.btn {
+  border-color: rgba(0, 0, 0, 0);
+}
+.header button.btn, .header .post a.btn, .post .header a.btn, .header #slider a.btn, #slider .header a.btn, .header #slider button.btn, #slider .header button.btn {
+  border-color: rgba(0, 0, 0, 0);
 }
 .header a.btn {
   background: rgba(32, 62, 54, 0.1);
@@ -3248,13 +3252,17 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
-  border-color: rgba(0, 0, 0, 0);
-  padding-top: 8px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .aside #btn-subscription:hover {
   opacity: 0.5;
+}
+.aside #btn-subscription {
+  border-color: rgba(0, 0, 0, 0);
+}
+.aside #btn-subscription {
+  padding-top: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .aside #btn-add {
   color: rgb(110, 85, 47);
@@ -3262,11 +3270,15 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
-  border-color: rgba(0, 0, 0, 0);
-  padding-top: 8px;
 }
 .aside #btn-add:hover {
   opacity: 0.5;
+}
+.aside #btn-add {
+  border-color: rgba(0, 0, 0, 0);
+}
+.aside #btn-add {
+  padding-top: 8px;
 }
 .aside #btn-add:hover {
   background: rgba(194, 111, 155, 0.3);
@@ -3325,11 +3337,15 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
-  border-color: rgba(0, 0, 0, 0);
-  border-radius: 5px;
 }
 .nav_menu .stick .btn.read_all:hover {
   opacity: 0.5;
+}
+.nav_menu .stick .btn.read_all {
+  border-color: rgba(0, 0, 0, 0);
+}
+.nav_menu .stick .btn.read_all {
+  border-radius: 5px;
 }
 .nav_menu .stick .btn.read_all:hover {
   background: rgba(39, 117, 182, 0.5);
@@ -3463,8 +3479,8 @@ main .flux:not(.current):hover .item.title {
 }
 #slider a.btn:not(.open-url) {
   border-radius: 3px;
-  margin-top: 8px;
-  padding-top: 12px;
+  text-align: center;
+  min-width: 80px;
 }
 #slider label {
   color: rgb(39, 117, 182);

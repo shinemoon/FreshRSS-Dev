@@ -407,6 +407,7 @@ td.numeric {
 
 .form-group.form-actions {
 	min-width: 250px;
+	backdrop-filter: blur(5px) grayscale(50);
 }
 
 .form-group .group-name {
@@ -2452,6 +2453,11 @@ html.slider-active {
 
 	.flux_content .content {
 		width: 100% !important;
+		img {
+			display:block;
+			margin-left:auto;
+			margin-right:auto;
+		}
 	}
 
 	.flux_content .content a {

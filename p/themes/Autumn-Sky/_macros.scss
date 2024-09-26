@@ -98,7 +98,7 @@ $layerBottom: 98;
 }
 
 //Links
-@mixin linkButton($size:$fontLevel4) {
+@mixin linkButton($size:$fontLevel5) {
     font-size:$size;
     color: $Cloisonne;    
 }
@@ -172,7 +172,7 @@ $layerBottom: 98;
      &:hover {
         opacity: 0.5;
      };
-     border-color:rgba(0,0,0,0);
+     & {border-color:rgba(0,0,0,0);};
 
 };
 
