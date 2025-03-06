@@ -55,7 +55,6 @@
   --frss-background-color-error-transparent: #ff000040;
   --frss-font-color-error: #f00;
   --frss-background-color: #fff;
-  --frss-notification-background-color: #e4e0da;
   --frss-background-color-transparent: #ffffff7f;
   --frss-background-color-middle: #eee;
   --frss-background-color-dark: #ccc;
@@ -443,7 +442,6 @@ td.numeric {
 
 .form-group.form-actions {
   min-width: 250px;
-  backdrop-filter: blur(5px) grayscale(50);
 }
 
 .form-group .group-name {
@@ -742,7 +740,6 @@ input[type=checkbox]:focus-visible {
   width: 100%;
   white-space: nowrap;
   box-sizing: border-box;
-  font-size: xx-small;
 }
 
 .dropdown-menu > .item[aria-checked=true] > a::before {
@@ -785,7 +782,7 @@ input[type=checkbox]:focus-visible {
 .item.separator {
   margin-top: 5px;
   padding-top: 5px;
-  border-top-width: 0px;
+  border-top-width: 1px;
   border-top-style: solid;
 }
 
@@ -1403,12 +1400,6 @@ a.website:hover .favicon {
   margin-right: 0.25rem;
 }
 
-.flux_content .content img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*=== Feed article content */
 .hide_posts > .flux:not(.active) > .flux_content {
   display: none;
@@ -1545,11 +1536,7 @@ a.website:hover .favicon {
   font-size: 1.2rem;
   opacity: 1;
   text-align: center;
-<<<<<<< HEAD
   line-height: 3;
-=======
-  line-height: 1.5;
->>>>>>> 9ce265820f52b778c187c253a313b8569538e348
   vertical-align: middle;
   visibility: visible;
   transition: visibility 0s, opacity 0.3s linear;
@@ -1567,7 +1554,7 @@ a.website:hover .favicon {
   bottom: 0;
   right: 0;
   display: inline-block;
-  line-height: 2;
+  line-height: 3;
 }
 
 .notification a.close:hover {
@@ -1667,10 +1654,6 @@ a.website:hover .favicon {
 
 #nav_entries a {
   display: block;
-}
-
-#nav_entries button, #nav_entries .post a.btn, .post #nav_entries a.btn, #nav_entries #slider a.btn, #slider #nav_entries a.btn, #nav_entries #slider button.btn, #slider #nav_entries button.btn {
-  width: 24%;
 }
 
 /*=== "Load" parts */
@@ -2460,11 +2443,6 @@ html.slider-active {
   .flux_content .content {
     width: 100% !important;
   }
-  .flux_content .content img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
   .flux_content .content a {
     color: var(--frss-font-color-dark);
   }
@@ -3091,7 +3069,7 @@ h2 {
 }
 
 a, button.as-link, .post a.as-link.btn, #slider a.as-link.btn, #slider button.as-link.btn, a.btn {
-  font-size: 12px;
+  font-size: 14px;
   color: rgb(39, 117, 182);
 }
 
@@ -3105,7 +3083,7 @@ button:hover, .post a.btn:hover, #slider a.btn:hover, #slider button.btn:hover, 
 }
 
 legend, #slider h1, #slider h2 {
-  font-size: x-small;
+  font-size: 20px;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
 }
@@ -3138,15 +3116,12 @@ label.group-name {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
+  border-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0, 0, 0);
+  opacity: 1;
 }
 .header button.btn:hover, .header .post a.btn:hover, .post .header a.btn:hover, .header #slider a.btn:hover, #slider .header a.btn:hover, .header #slider button.btn:hover, #slider .header button.btn:hover {
   opacity: 0.5;
-}
-.header button.btn, .header .post a.btn, .post .header a.btn, .header #slider a.btn, #slider .header a.btn, .header #slider button.btn, #slider .header button.btn {
-  border-color: rgba(0, 0, 0, 0);
-}
-.header button.btn, .header .post a.btn, .post .header a.btn, .header #slider a.btn, #slider .header a.btn, .header #slider button.btn, #slider .header button.btn {
-  border-color: rgba(0, 0, 0, 0);
 }
 .header a.btn {
   background: rgba(32, 62, 54, 0.1);
@@ -3188,18 +3163,6 @@ main .flux.not_read .item.title, main .flux.current .item.title {
   font-size: 16px;
   font-weight: normal;
 }
-<<<<<<< HEAD
-=======
-main .flux.not_read .content, main .flux.current .content {
-  font-size: 12.8px;
-  line-height: 22.4px;
-  border-top: 1px dotted rgb(250, 142, 22);
-  border-bottom: 1px dotted rgb(250, 142, 22);
-  background: rgba(249, 236, 195, 0.1);
-  padding-left: 20px;
-  padding-right: 20px;
-}
->>>>>>> 9ce265820f52b778c187c253a313b8569538e348
 main .flux.not_read .content div[data-sanitized-class=pic-row] img, main .flux.current .content div[data-sanitized-class=pic-row] img {
   border: 2px solid #aaa;
   border-radius: 4px;
@@ -3280,17 +3243,13 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
-}
-.aside #btn-subscription:hover {
-  opacity: 0.5;
-}
-.aside #btn-subscription {
   border-color: rgba(0, 0, 0, 0);
-}
-.aside #btn-subscription {
   padding-top: 8px;
   padding-left: 20px;
   padding-right: 20px;
+}
+.aside #btn-subscription:hover {
+  opacity: 0.5;
 }
 .aside #btn-add {
   color: rgb(110, 85, 47);
@@ -3298,15 +3257,11 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
+  border-color: rgba(0, 0, 0, 0);
+  padding-top: 8px;
 }
 .aside #btn-add:hover {
   opacity: 0.5;
-}
-.aside #btn-add {
-  border-color: rgba(0, 0, 0, 0);
-}
-.aside #btn-add {
-  padding-top: 8px;
 }
 .aside #btn-add:hover {
   background: rgba(194, 111, 155, 0.3);
@@ -3365,15 +3320,11 @@ main .flux:not(.current):hover .item.title {
   margin-left: 1px;
   background: rgb(227, 189, 141);
   opacity: 0.8;
+  border-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
 }
 .nav_menu .stick .btn.read_all:hover {
   opacity: 0.5;
-}
-.nav_menu .stick .btn.read_all {
-  border-color: rgba(0, 0, 0, 0);
-}
-.nav_menu .stick .btn.read_all {
-  border-radius: 5px;
 }
 .nav_menu .stick .btn.read_all:hover {
   background: rgba(39, 117, 182, 0.5);
@@ -3457,10 +3408,9 @@ main .flux:not(.current):hover .item.title {
   border-top-color: rgb(147, 156, 151);
 }
 .configure .dropdown .dropdown-menu .dropdown-section-title {
-  font-size: x-small;
+  font-size: 20px;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
-  font-size: x-small;
 }
 
 .dropdown-close {
@@ -3507,8 +3457,8 @@ main .flux:not(.current):hover .item.title {
 }
 #slider a.btn:not(.open-url) {
   border-radius: 3px;
-  text-align: center;
-  min-width: 80px;
+  margin-top: 8px;
+  padding-top: 12px;
 }
 #slider label {
   color: rgb(39, 117, 182);
@@ -3516,7 +3466,7 @@ main .flux:not(.current):hover .item.title {
 }
 
 #aside_feed .nav-header {
-  font-size: x-small;
+  font-size: 20px;
   color: rgb(227, 189, 141);
   border-bottom: 1px solid rgb(227, 189, 141);
   font-weight: normal;
