@@ -1307,8 +1307,15 @@ a.website:hover .favicon {
   position: initial;
 }
 
+.flux.not_read .flux_header .item a.title {
+  color: rgb(39, 117, 182);
+}
+
+.flux:not(.not_read) .flux_header .item a.title {
+  color: #888;
+}
+
 .flux .item.title a {
-  color: var(--frss-font-color-dark);
   text-decoration: none;
 }
 
@@ -2033,7 +2040,6 @@ html.slider-active {
 
 .aside .category .title:not([data-unread="0"])::after,
 .aside .feed .item-title:not([data-unread="0"])::after {
-  margin: calc(0.125rem + var(--frss-padding-top-bottom)) 0 0 0;
   padding: 0.25rem 0.5rem;
   min-width: 2rem;
   display: block;
@@ -3153,6 +3159,7 @@ main .flux:not(.not_read):not(.current) {
   font-size: 16px;
   font-weight: normal;
   background: rgba(250, 142, 22, 0.05);
+  color: grey;
 }
 main .flux:not(.not_read):not(.current):hover {
   background: rgba(250, 142, 22, 0.1);
@@ -3215,6 +3222,8 @@ main .flux:not(.current):hover .item.title {
 
 .nav_menu {
   background: #C1E4EC;
+  position: sticky;
+  top: 0;
   width: 100%;
 }
 .nav_menu .btn:hover {

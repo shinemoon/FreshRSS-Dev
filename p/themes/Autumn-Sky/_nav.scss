@@ -1,6 +1,8 @@
 
 .nav_menu {
     background:$Nav_blue;
+    position:sticky;
+    top:0;
     width:100%;
     .btn {
         &:hover {
