@@ -1262,6 +1262,10 @@ a.website:hover .favicon {
 	font-weight: bold;
 }
 
+.flux.current article.flux_content {
+    @include styleContent;
+}
+
 .flux:not(.current):hover .item.title {
 	background-color: inherit;
 	max-width: calc(100% - 320px);
@@ -1489,21 +1493,7 @@ a.website:hover .favicon {
 
 /*=== Notification and actualize notification */
 .notification {
-	padding: 0.75rem 3.5rem 0.75rem 0.75rem;
-	position: absolute;
-	top: 1rem;
-	left: 25%; right: 25%;
-	z-index: 9999;
-	background-color: var(--frss-background-color);
-	font-weight: bold;
-	font-size: 0.9rem;
-	border: 1px solid var(--frss-border-color);
-	opacity: 1;
-	text-align: center;
-	line-height: 2;
-	vertical-align: middle;
-	visibility: visible;
-	transition: visibility 0s, opacity .3s linear;
+    @include notification;
 }
 
 .notification.closed {
@@ -2439,6 +2429,7 @@ html.slider-active {
 
 	#global,
 	.flux_content {
+//        @include styleContent;
 		display: block !important;
 	}
 

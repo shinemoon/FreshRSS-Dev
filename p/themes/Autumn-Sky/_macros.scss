@@ -128,6 +128,24 @@ $layerBottom: 98;
     font-weight:normal; 
 };
 
+@mixin notification {
+    border-radius:10px;
+    background:rgba($Far_Sky_Blue,0.9);
+	padding: 0.75rem 3.5rem 0.75rem 0.75rem;
+	position: absolute;
+	top: 0.2rem;
+	left: 25%; right: 25%;
+	z-index: 9999;
+	font-weight: normal;
+	font-size: 1.2rem;
+//	border: 1px solid var(--frss-border-color);
+	opacity: 1;
+	text-align: center;
+	line-height: 3;
+	vertical-align: middle;
+	visibility: visible;
+	transition: visibility 0s, opacity .3s linear;
+}
 // Article Text
 @mixin fontTitle {
     font-size:$fontLevel4;
@@ -136,7 +154,7 @@ $layerBottom: 98;
 
 // Article Content
 @mixin styleContent {
-    font-size: $fontLevel2*0.9;
+    font-size: $fontLevel2*0.7;
     line-height:$fontLevel2 * 1.4;
     border-top:1px dotted $Apricot_yellow;
     border-bottom:1px dotted $Apricot_yellow;

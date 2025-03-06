@@ -158,6 +158,7 @@
 
 //NavEn
 #nav_entries{
+    display:flex;
     background:rgba($Cloisonne, 0.2);
     a:hover {
         background:rgba($Cloisonne, 0.3);

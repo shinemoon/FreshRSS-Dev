@@ -1287,6 +1287,16 @@ a.website:hover .favicon {
   font-weight: bold;
 }
 
+.flux.current article.flux_content {
+  font-size: 12.6px;
+  line-height: 25.2px;
+  border-top: 1px dotted rgb(250, 142, 22);
+  border-bottom: 1px dotted rgb(250, 142, 22);
+  background: rgba(249, 236, 195, 0.1);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .flux:not(.current):hover .item.title {
   background-color: inherit;
   max-width: calc(100% - 320px);
@@ -1514,19 +1524,19 @@ a.website:hover .favicon {
 
 /*=== Notification and actualize notification */
 .notification {
+  border-radius: 10px;
+  background: rgba(209, 222, 230, 0.9);
   padding: 0.75rem 3.5rem 0.75rem 0.75rem;
   position: absolute;
-  top: 1rem;
+  top: 0.2rem;
   left: 25%;
   right: 25%;
   z-index: 9999;
-  background-color: var(--frss-background-color);
-  font-weight: bold;
-  font-size: 0.9rem;
-  border: 1px solid var(--frss-border-color);
+  font-weight: normal;
+  font-size: 1.2rem;
   opacity: 1;
   text-align: center;
-  line-height: 2;
+  line-height: 3;
   vertical-align: middle;
   visibility: visible;
   transition: visibility 0s, opacity 0.3s linear;
@@ -2595,7 +2605,7 @@ form th {
 .dropdown-menu {
   margin: 5px 0 0;
   padding: 5px 0;
-  font-size: 0.8rem;
+  font-size: 1rem;
   text-align: left;
 }
 
@@ -2850,12 +2860,12 @@ form th {
 
 /*=== Feed articles */
 .flux_header {
-  font-size: 0.8rem;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .flux_header .title {
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .flux .website .favicon {
@@ -3152,15 +3162,6 @@ main .flux:not(.not_read):not(.current) .item.title:hover {
 main .flux.not_read .item.title, main .flux.current .item.title {
   font-size: 16px;
   font-weight: normal;
-}
-main .flux.not_read .content, main .flux.current .content {
-  font-size: 16.2px;
-  line-height: 25.2px;
-  border-top: 1px dotted rgb(250, 142, 22);
-  border-bottom: 1px dotted rgb(250, 142, 22);
-  background: rgba(249, 236, 195, 0.1);
-  padding-left: 20px;
-  padding-right: 20px;
 }
 main .flux.not_read .content div[data-sanitized-class=pic-row] img, main .flux.current .content div[data-sanitized-class=pic-row] img {
   border: 2px solid #aaa;
@@ -3472,6 +3473,7 @@ main .flux:not(.current):hover .item.title {
 }
 
 #nav_entries {
+  display: flex;
   background: rgba(39, 117, 182, 0.2);
 }
 #nav_entries a:hover {

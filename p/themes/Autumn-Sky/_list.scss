@@ -39,7 +39,7 @@ main {
             };
             .content {
                 // Article: Content
-                @include styleContent;
+//                @include styleContent;
                 div[data-sanitized-class="pic-row"] {
                     //text-align:center;
                     img {
