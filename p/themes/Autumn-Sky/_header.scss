@@ -14,8 +14,7 @@
     };
     button.btn {
         @include bigbuttonStyle;
-        border-color:rgba(0,0,0,0);
-        opacity:1;
+        & {border-color:rgba(0,0,0,0);};
     };
     a.btn {
         background:rgba($Elder_Green,0.1);
