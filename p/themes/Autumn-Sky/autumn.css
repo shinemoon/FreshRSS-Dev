@@ -1288,8 +1288,8 @@ a.website:hover .favicon {
 }
 
 .flux.current article.flux_content {
-  font-size: 12.6px;
-  line-height: 25.2px;
+  font-size: 16.2px;
+  line-height: 32.4px;
   border-top: 1px dotted rgb(250, 142, 22);
   border-bottom: 1px dotted rgb(250, 142, 22);
   background: rgba(249, 236, 195, 0.1);
@@ -2038,8 +2038,14 @@ html.slider-active {
   color: var(--frss-font-color-light);
 }
 
+dside .category .tree-folder-title .title:not([data-unread="0"])::after,
+.aside .feed .item-title:not([data-unread="0"])::after {
+  margin: 0;
+}
+
 .aside .category .title:not([data-unread="0"])::after,
 .aside .feed .item-title:not([data-unread="0"])::after {
+  margin: 1.1rem 0 0 0;
   padding: 0.25rem 0.5rem;
   min-width: 2rem;
   display: block;
@@ -2487,6 +2493,11 @@ html.slider-active {
   margin: -1px;
 }
 
+.flux.not_read .item .title,
+.flux.current .item .title {
+  font-weight: 500;
+}
+
 /* stylelint-disable block-no-empty  */
 /*=== GENERAL */
 /*============*/
@@ -2872,7 +2883,7 @@ form th {
 }
 
 .flux_header .title {
-  font-size: 1rem;
+  font-size: 1.1rem;
 }
 
 .flux .website .favicon {
@@ -3197,17 +3208,20 @@ main .flux:not(.current):hover .item.title {
 }
 
 #bigMarkAsRead {
-  background: rgba(39, 117, 182, 0.4);
+  background: rgba(39, 117, 182, 0.2);
   padding: 10px 0 0px 0;
   margin-top: 20px;
   font-size: 16px;
 }
 #bigMarkAsRead:hover {
-  background: rgba(39, 117, 182, 0.6);
+  background: rgba(39, 117, 182, 0.4);
   color: white;
 }
 #bigMarkAsRead.as-link {
   color: rgb(147, 156, 151);
+}
+#bigMarkAsRead.as-link:hover {
+  color: white;
 }
 #bigMarkAsRead .bigTick {
   font-size: 14px;

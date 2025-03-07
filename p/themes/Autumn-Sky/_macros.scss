@@ -154,8 +154,8 @@ $layerBottom: 98;
 
 // Article Content
 @mixin styleContent {
-    font-size: $fontLevel2*0.7;
-    line-height:$fontLevel2 * 1.4;
+    font-size: $fontLevel2*0.9;
+    line-height:$fontLevel2 * 1.8;
     border-top:1px dotted $Apricot_yellow;
     border-bottom:1px dotted $Apricot_yellow;
     background:rgba($Almond_yellow,0.1);

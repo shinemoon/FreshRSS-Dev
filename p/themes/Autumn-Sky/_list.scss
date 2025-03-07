@@ -79,16 +79,19 @@ main {
 
 
 #bigMarkAsRead {
-    background: rgba($Cloisonne,0.4);  
+    background: rgba($Cloisonne,0.2);  
     padding: 10px 0 0px 0;
     margin-top:20px;
     font-size: $fontLevel3;
     &:hover {
-        background: rgba($Cloisonne,0.6);  
+        background: rgba($Cloisonne,0.4);  
         color:white;
     }
     &.as-link{
         color:$mink_gray;
+        &:hover {
+            color:white;
+        }
     }
  
     .bigTick {

@@ -1976,9 +1976,15 @@ html.slider-active {
 	color: var(--frss-font-color-light);
 }
 
+dside .category .tree-folder-title .title:not([data-unread="0"])::after,
+.aside .feed .item-title:not([data-unread="0"])::after {
+    margin:0;
+}
+
 .aside .category .title:not([data-unread="0"])::after,
 .aside .feed .item-title:not([data-unread="0"])::after {
-//	margin: calc(0.125rem + var(--frss-padding-top-bottom)) 0 0 0;
+	//margin: calc(0.125rem + var(--frss-padding-top-bottom)) 0 0 0;
+	margin: calc(1.1rem) 0 0 0;
 	padding: 0.25rem 0.5rem;
 	min-width: 2rem;
 	display: block;
@@ -2482,4 +2488,11 @@ html.slider-active {
 
 .drag-drop-marker {
 	margin: -1px;
+}
+
+
+
+.flux.not_read .item .title,
+.flux.current .item .title {
+        font-weight: 500;
 }
