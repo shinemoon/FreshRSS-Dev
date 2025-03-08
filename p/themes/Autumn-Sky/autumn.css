@@ -3239,6 +3239,7 @@ main .flux:not(.current):hover .item.title {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1000;
 }
 .nav_menu .btn:hover {
   opacity: 0.8;
